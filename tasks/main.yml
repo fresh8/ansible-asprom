@@ -1,0 +1,13 @@
+- name: Download and extract asprom
+  unarchive: 
+    remote_src: yes
+    src: "https://github.com/fresh8/asprom/releases/download/v{{ asprom_version }}/asprom_{{ asprom_version }}_{{ ansible_system | lower }}_amd64.tar.gz"
+    dest: "/usr/local/bin"
+
+- name: Copy upstart script
+  copy:
+    src: asprom.conf
+    dest: /etc/init/asprom.conf
+
+- name: Restart asprom
+  service: name=asprom state=restarted

@@ -1,0 +1,16 @@
+---
+
+dependencies: []
+
+galaxy_info:
+  author: Lee Archer
+  description: Aerospike Prometheus metrics exporter (asprom)
+  company: "Fresh 8 Gaming"
+  license: "MIT"
+  min_ansible_version: 2.0
+  platforms:
+    - name: Ubuntu
+      versions:
+      - all
+  galaxy_tags:
+    - aerospike
